@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w & nodemon app.js"
+    "start": "webpack -w & nodemon app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,10 +32,12 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
-    "react-router": "^4.1.1"
+    "react-router": "^4.1.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-preset-react": "^6.24.1",
     "webpack": "^3.0.0"
-  }
+  },
+  "snyk": true
 }
